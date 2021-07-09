@@ -17,7 +17,13 @@ bot.distube
 	.on("addSong", (message, queue, song) => message.channel.send(
         `Added ${song.name} - \`${song.formattedDuration}\` to the queue by ${song.user}`
     ).then(m => m.delete({ timeout: 5000 })
-    ));
+    ))
+.on("finish", (message, que, song) =>{
+const embed = new Discord.MessageEmbed()
+    .setTitle('Not Playing')
+    .setImage(`https://image.shutterstock.com/image-photo/sunset-coast-lake-nature-landscape-260nw-1960131820.jpg`)
+    bot.msg.edit(embed)
+    });
 bot.on('clickButton', async(button) => {
  const embed = new Discord.MessageEmbed()
     .setTitle('Not Playing')
