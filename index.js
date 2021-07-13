@@ -4,7 +4,7 @@ const bot = new Discord.Client({
 });
 require('discord-buttons')(bot);
 const {buttube} = require('buttube')
-bot.buttube = new buttube(bot)
+bot.buttube = new buttube(bot, "mongodb url")
 const config = require('./settings.json');
 const { loadCommands } = require('./utils/loadCommands');
 bot.on('clickButton', async(button) => {
