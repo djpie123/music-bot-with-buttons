@@ -3,7 +3,8 @@ const bot = new Discord.Client({
 	partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 });
 require('discord-buttons')(bot);
-bot.buttube = new buttube(client)
+const {buttube} = require('buttube')
+bot.buttube = new buttube(bot)
 const config = require('./settings.json');
 const { loadCommands } = require('./utils/loadCommands');
 bot.on('clickButton', async(button) => {
