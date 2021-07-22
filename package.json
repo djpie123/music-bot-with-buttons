@@ -4,7 +4,7 @@
   "description": "1.Rename `settings.json.example` to `settings.json` and put your bot token in there   2.Do npm install   3.Run the bot `node .`",
   "main": "index.js",
   "dependencies": {
-    "buttube": "^0.1.2",
+    "buttube": "^0.1.4",
     "discord.js": "^12.5.3"
   },
   "devDependencies": {},
